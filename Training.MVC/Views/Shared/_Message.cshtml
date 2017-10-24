@@ -1,0 +1,111 @@
+﻿@{
+    //success messages
+    var successMessages = new List<string>();
+    if (TempData[string.Format("training.notifications.{0}", NotifyType.Success)] != null)
+    {
+        successMessages.AddRange(TempData[string.Format("training.notifications.{0}", NotifyType.Success)] as IList<string>);
+    }
+    if (ViewData[string.Format("training.notifications.{0}", NotifyType.Success)] != null)
+    {
+        successMessages.AddRange(ViewData[string.Format("training.notifications.{0}", NotifyType.Success)] as IList<string>);
+    }
+
+
+    //error messages
+    var errorMessages = new List<string>();
+    if (TempData[string.Format("training.notifications.{0}", NotifyType.Error)] != null)
+    {
+        errorMessages.AddRange(TempData[string.Format("training.notifications.{0}", NotifyType.Error)] as IList<string>);
+    }
+    if (ViewData[string.Format("training.notifications.{0}", NotifyType.Error)] != null)
+    {
+        errorMessages.AddRange(ViewData[string.Format("training.notifications.{0}", NotifyType.Error)] as IList<string>);
+    }
+
+
+    //warning messages
+    var warningMessages = new List<string>();
+    if (TempData[string.Format("training.notifications.{0}", NotifyType.Warning)] != null)
+    {
+        warningMessages.AddRange(TempData[string.Format("training.notifications.{0}", NotifyType.Warning)] as IList<string>);
+    }
+    if (ViewData[string.Format("training.notifications.{0}", NotifyType.Warning)] != null)
+    {
+        warningMessages.AddRange(ViewData[string.Format("training.notifications.{0}", NotifyType.Warning)] as IList<string>);
+    }
+}
+
+@foreach (var message in successMessages)
+{
+    <div class="modal fade in" id="notification-success" tabindex="-1" role="dialog" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icons-office-52"></i></button>
+                    <h4 class="modal-title"><strong>Success</strong></h4>
+                </div>
+                <div class="modal-body">
+                    <p>@message</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#notification-success').modal();
+        });
+    </script>
+}
+
+@foreach (var message in errorMessages)
+{
+    <div class="modal fade in" id="notification-error" tabindex="-1" role="dialog" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-red">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icons-office-52"></i></button>
+                    <h4 class="modal-title"><strong>Error</strong></h4>
+                </div>
+                <div class="modal-body">
+                    <p>@message</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+                $('#notification-error').modal();
+        });
+    </script>
+}
+
+@foreach (var message in warningMessages)
+{
+    <div class="modal fade in" id="notification-warning" tabindex="-1" role="dialog" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-yellow">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icons-office-52"></i></button>
+                    <h4 class="modal-title"><strong>Warning</strong></h4>
+                </div>
+                <div class="modal-body">
+                    <p>@message</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+                    $('#notification-warning').modal();
+        });
+    </script>
+}
