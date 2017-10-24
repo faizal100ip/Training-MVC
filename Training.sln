@@ -13,6 +13,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Training.Data (Libraries)",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Training.Services (Business Logics)", "Training.Services\Training.Services (Business Logics).csproj", "{4E48FE05-1977-4385-82E4-925A7DB9C512}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database Script", "Database Script", "{B307EE0D-E027-4FD4-A7A7-0CD010F1BA8B}"
+	ProjectSection(SolutionItems) = preProject
+		Database Scripts\Script.txt = Database Scripts\Script.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{4FDB7D08-0FB1-4D65-9CE0-5572B4E29829}"
+	ProjectSection(SolutionItems) = preProject
+		Documents\Developing ASP.NET MVC 5.pdf = Documents\Developing ASP.NET MVC 5.pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -184,8 +184,14 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PassportController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Factory\Customers\ICustomerFactoryApi.cs" />
+    <Compile Include="Factory\Customers\CustomerFactoryApi.cs" />
     <Compile Include="Factory\FactoryApi.cs" />
     <Compile Include="Factory\IFactoryApi.cs" />
+    <Compile Include="Factory\Orders\IOrderFactoryApi.cs" />
+    <Compile Include="Factory\Orders\OrderFactoryApi.cs" />
+    <Compile Include="Factory\Products\IProductFactoryApi.cs" />
+    <Compile Include="Factory\Products\ProductFactoryApi.cs" />
     <Compile Include="Factory\RestsharpExtension.cs" />
     <Compile Include="Factory\Users\IUserFactoryApi.cs" />
     <Compile Include="Factory\Users\UserFactoryApi.cs" />

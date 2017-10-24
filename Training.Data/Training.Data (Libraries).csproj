@@ -70,6 +70,9 @@
       <Name>Training.Model %28Libraries%29</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Mapping\Orders\" />
+    <Folder Include="Mapping\Products\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
